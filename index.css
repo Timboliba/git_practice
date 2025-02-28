@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 1em;
+    height: 100vh;
+    justify-content: center;
+    h1{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        input{
+            flex-grow: 1;
+            padding: 5px 0;
+        }
+        button{
+            padding: 8px 1em;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(10, 187, 34);
+            border: none;
+        }
+    }
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    height: 80vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+.item{
+    border: 1px solid silver;
+    box-shadow: 0 0 1px black;
+    border-radius: 5px;
+    width: 40vw;
+    padding: 5px;
+}
+
+.item:hover{
+    box-shadow: 0 0 5px teal;
+}
+
+.item,.options{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.options{
+    button{
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .delete{
+        background-color: red;
+    }
+    .edit{
+        background-color: rgb(7, 170, 7);
+    }
+    .valide{
+        background-color: blue;
+    }
+}
+
+
+.popUp{
+    position: absolute;
+    z-index: 1;
+    background-color: aquamarine;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
